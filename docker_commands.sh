@@ -28,8 +28,11 @@ docker run -it --name=nombreContenedor distribucion comando
 # Ejecutar container con un comando
 docker run distribucion comando # un posible comando es el clasico echo helloWord
 
+# Pausar contenedor
+ docker pause # suspends all processes in the specified containers.
+
 # Detener contenedor
-docker stop containerID
+docker stop containerID #The main process inside the container will receive SIGTERM, and after a grace period, SIGKILL
 
 # Forzar la eliminación del contenedor, incluso si está corriendo procesos
 docker rm -f nombre_contenedor
