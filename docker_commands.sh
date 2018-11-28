@@ -31,6 +31,9 @@ docker run distribucion comando # un posible comando es el clasico echo helloWor
 # Detener contenedor
 docker stop containerID
 
+# Forzar la eliminación del contenedor, incluso si está corriendo procesos
+docker rm -f nombre_contenedor
+
 # Activar contenedor 
 docker start containerID
 
@@ -38,7 +41,7 @@ docker start containerID
 docker attach containerID
 
 # Ejecutar comandos en un contenedor de forma interactiva (quedando en la consola)
-docker exect -it containerID comando
+docker exec -it containerID comando #pueder ser bash, por ejemplo.
 
 # Enlistar imagenes
 docker images
