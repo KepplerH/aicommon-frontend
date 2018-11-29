@@ -84,3 +84,6 @@ docker search -s 10 busqueda # 10 es igual a la puntuacion buscada
 
 # Borrar imagen 
 docker rmi imagenID # ningun contenedor puede estar usandolo
+
+# Mapear carpeta de mi local (Mac, en este caso) a directorio del contenedor (local:contenedor)
+docker run --name db -d -v /Users/dev/Dev/platzi/mongodata:/data/db mongo
