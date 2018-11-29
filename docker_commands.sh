@@ -95,6 +95,21 @@ docker volume creare NOMBRE
 docker volume ls
 
 # Mapear carpeta de mi volumen a directorio del contenedor (volume:contenedor) ...parecido al comando anterior
-
 docker run -d --name NOMBRE_CONTENEDOR —mount src=NOMBRE_VOLUMEN,dst=/data/db NOMBRE_IMAGEN
 
+# eliminar todos los volumenes (WARNING)
+docker volume prune
+
+# Listar las imagenes
+docker image ls
+
+# Eliminar una imagen
+docker rmi HASH #el hash de la imagen, tipo: 0d91s8E3s
+
+# Descargar imagenes
+docker pull NOMBRE_IMAGEN
+docker pull ubuntu:18.04 # descargando una version en particular, POR DEFECTO SUELE SER "LATEST"
+
+# Dockerfile: es la receta para construir nuestras imagenes. Siempre debe partir con un FROM
+ejemplo: FROM ubuntu
+         RUN touch /usr/src/hola
