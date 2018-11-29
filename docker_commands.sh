@@ -115,6 +115,14 @@ ejemplo: FROM ubuntu
          RUN touch /usr/src/hola
 
 # con esto construimos nuestra imagen basada en el dockerfile
-docker build -t NOMBRE_IMAGEN:TAG .
+docker build -t NOMBRE_IMAGEN:TAG . # puede ser ubuntu:hans, por ejemplo
 
+# Flujo para construir en docker
+https://puu.sh/C9opx/759d333008.png (ver imagen)
+
+# Taggear mi imagen para poder subirla a DockerHub
+docker tag NOMBRE_IMAGEN:TAG_PREVIO MI_USUARIO_DOCKERHUB/ubuntu:hans # por ejemplo
+
+# Luego de taggear, publicar tu imagen propia
+docker push hansfpc/ubuntu:hans # nombredetucuenta/imagen:tag
 
