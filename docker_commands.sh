@@ -113,3 +113,8 @@ docker pull ubuntu:18.04 # descargando una version en particular, POR DEFECTO SU
 # Dockerfile: es la receta para construir nuestras imagenes. Siempre debe partir con un FROM
 ejemplo: FROM ubuntu
          RUN touch /usr/src/hola
+
+# con esto construimos nuestra imagen basada en el dockerfile
+docker build -t NOMBRE_IMAGEN:TAG .
+
+
