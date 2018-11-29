@@ -126,3 +126,5 @@ docker tag NOMBRE_IMAGEN:TAG_PREVIO MI_USUARIO_DOCKERHUB/ubuntu:hans # por ejemp
 # Luego de taggear, publicar tu imagen propia
 docker push hansfpc/ubuntu:hans # nombredetucuenta/imagen:tag
 
+# listar las capas de la imagen, cuanto pesa cada layer, etc
+docker history imagen:tag
