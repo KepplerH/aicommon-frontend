@@ -85,5 +85,16 @@ docker search -s 10 busqueda # 10 es igual a la puntuacion buscada
 # Borrar imagen 
 docker rmi imagenID # ningun contenedor puede estar usandolo
 
-# Mapear carpeta de mi local (Mac, en este caso) a directorio del contenedor (local:contenedor)
+# Mapear carpeta de mi local (Mac, en este caso) a directorio del contenedor (local:contenedor) a.k.a bind mount
 docker run --name db -d -v /Users/dev/Dev/platzi/mongodata:/data/db mongo
+
+# Crear volumen de docker (Mejor que bind mounts)
+docker volume creare NOMBRE
+
+# Listar los volúmenes que tengo
+docker volume ls
+
+# Mapear carpeta de mi volumen a directorio del contenedor (volume:contenedor) ...parecido al comando anterior
+
+docker run -d --name NOMBRE_CONTENEDOR —mount src=NOMBRE_VOLUMEN,dst=/data/db NOMBRE_IMAGEN
+
