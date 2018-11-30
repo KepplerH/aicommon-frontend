@@ -89,7 +89,7 @@ docker rmi imagenID # ningun contenedor puede estar usandolo
 docker run --name db -d -v /Users/dev/Dev/platzi/mongodata:/data/db mongo
 
 # Crear volumen de docker (Mejor que bind mounts)
-docker volume creare NOMBRE
+docker volume create NOMBRE
 
 # Listar los volúmenes que tengo
 docker volume ls
