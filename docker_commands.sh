@@ -162,6 +162,9 @@ docker compose down
 docker-compose logs NOMBRE_SERVICIO
 docker-compose logs db
 
+# Leer los docs de un servicio en particular SIN perder el output
+docker-compose logs -f NOMBRE_SERVICIO
+
 # Ver el estado de docker-compose
 docker-compose ps
 
