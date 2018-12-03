@@ -148,3 +148,37 @@ docker network inspect NOMBRE_RED
 
 # Eliminar una red de docker
 docker network rm NOMBRE_RED
+
+# Ejecutar contenedores docker-compose, leídos en docker-compose.yml
+docker compose up
+
+# Ejecutar contenedores docker-compose en modo dettached, es decir sin output de consola
+docker compose up -d 
+
+# Detener los contenedores de docker-compose
+docker compose down
+
+# Leer los docs de un servicio en particular
+docker-compose logs NOMBRE_SERVICIO
+docker-compose logs db
+
+# Ver el estado de docker-compose
+docker-compose ps
+
+# Ejecutar contenedores en segundo plano docker-compose
+docker-compose up -d
+
+# Entrar a un contenedor montado con docker-compose
+docker-compose exec app bash
+
+# Hacer build de un Dockerfile con docker-compose
+docker-compose build # en tu docker-compose.yml debe estar el comando build y el contexto ".", para que lea ahí mismo
+
+# Excluir archivos para que no hagan parte del build
+para esto usamos el archivo .dockerignore
+
+# Correr un multistage build
+docker build -t platziapp -f build/development.Dockerfile .
+docker build -t platziapp -f build/production.Dockerfile .
+
+
