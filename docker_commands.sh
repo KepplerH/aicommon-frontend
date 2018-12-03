@@ -128,3 +128,23 @@ docker push hansfpc/ubuntu:hans # nombredetucuenta/imagen:tag
 
 # listar las capas de la imagen, cuanto pesa cada layer, etc
 docker history imagen:tag
+
+# Listar redes en docker
+docker network ls
+
+* viene con 3 redes pre-configuradas:
+1. Bridge: Es la red donde por defecto puedes conectar contenedores con Link (en desuso), no muy importante
+2. Host: Es la forma de docker para representar la red de mi maquina local. Corren con la red de mi pc (inseguro?)
+3. None: El contenedor no tendrá interfaz de red, estará aislado. No tiene networking.
+
+# Crear una red de docker (--attachable nos permite usar la red en otros contenedores)
+docker network create --attachable NOMBRE_RED
+
+# Conectar un contenedor a una red existente (attachable, por lo demás)
+docker network connect  NOMBRE_RED NOMBRE_CONTENEDOR
+
+# Inspeccionar una red... podemos ver que contenedores la usan, etc
+docker network inspect NOMBRE_RED
+
+# Eliminar una red de docker
+docker network rm NOMBRE_RED
